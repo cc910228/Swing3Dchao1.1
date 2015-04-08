@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.khu.chao.swing3dchao11" >
+
+    <!-- Permission for recording sound -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- Permission for using camera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.front" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- Permission for using storage -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".UpperActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChanMain"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".ChaoMain"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".ChaoSecond">
+        </activity>
+        <activity
+            android:name=".ZainMain"
+            android:label="Bluetooth" >
+        </activity>
+        <activity android:name=".DeviceListActivity"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog"
+            android:configChanges="orientation|keyboardHidden" />
+
+    </application>
+
+
+</manifest>
